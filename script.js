@@ -24,6 +24,7 @@ function grade(input){
 }
 const total=220;
 let actual_score=0;
+let flag=false;
 const arr=[];
 const usecase=document.querySelectorAll('input');
 function cal(){
@@ -32,12 +33,30 @@ usecase.forEach(element => {
 });
 arr.forEach((item,index,arr)=>{
     if(index==6 || index==7){
+        const hi=grade(item);
+        if(hi==4){
+            flag=true;
+        }
         return arr[index]=grade(item)*2;
     }
     else{
+        const hi=grade(item);
+        if(hi==4){
+            flag=true;
+        }
         return arr[index]=grade(item)*3;
     }
 });
+if(flag){
+    document.querySelector('body').innerHTML = `
+  <h1 style="color: lightblue; text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-size: 3rem; -webkit-text-stroke: 2px yellow;">
+    YOU ARE COOKED
+  </h1>`;
+
+
+
+    return ;
+}
 actual_score=arr.reduce((acc,curr)=>{
     return acc+curr;
 },0);
