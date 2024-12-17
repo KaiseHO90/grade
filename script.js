@@ -44,7 +44,7 @@ actual_score=arr.reduce((acc,curr)=>{
 const hel=Math.round((actual_score/total)*1000)/100;
 console.log(hel);
 console.log(arr);
-document.querySelector('p').innerHTML=`<h1> The CGPA is ${hel} </h1>`;
+document.querySelector('p').innerHTML=`<h2> The CGPA is ${hel} </h2>`;
 arr.length=0;
 }
 document.querySelector('button').addEventListener('click',cal);
