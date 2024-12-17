@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: "Jura", sans-serif;
+}
+
+body {
+    background-image: url('spider.jpg'); /* Ensure this image exists */
+    background-size: cover;
+    height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+.main {
+    width: 600px;
+    height: 600px;
+    margin: 50px  auto ;
+    background-color: rgba(255, 255, 255, 0.5); /* Adding background color for visibility */
+    border-radius: 50%;
+    color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text inside the div */
+    border: solid yellow;
+}
+span{
+    font-size: large;
+    font-style: italic;
+    margin-right: 6px;
+    font-weight: bold;
+}
+button{
+    margin: 6px;
+}
+p {
+    font-size: 2rem;
+}
